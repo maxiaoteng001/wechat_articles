@@ -211,7 +211,6 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
                 insert_values.append((label, title, digest, wechat_name, content_url,
                                       article_html, article_text, article_timestamp,
                                       article_rich_media, cover_1))
-                print(insert_values)
                 data2 = int(count_data) + 1
                 with open(data_path, 'w') as f:
                     s = str(data2)
