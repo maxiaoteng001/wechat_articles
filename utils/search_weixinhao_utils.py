@@ -182,7 +182,7 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
                     data1 = f.read()
                     f.close()
                 save_image(data1, cover_url=cover)
-                cover_1 = 'http://static.sddl.yunfutech.com/news/{}/01.png'.format(data1)
+                cover_1 = 'http://static.wechat.maxiaoteng.tk/news/{}/01.png'.format(data1)
                 title = multi_app_msg_item['title']  # 标题
                 if title in origin_titles:  # 如果有该文章，则跳过
                     continue
@@ -224,7 +224,7 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
                 data1 = f.read()
                 f.close()
             save_image(data1, cover_url=cover)
-            cover_1 = 'http://static.sddl.yunfutech.com/news/{}/01.png'.format(data1)
+            cover_1 = 'http://static.wechat.maxiaoteng.tk/news/{}/01.png'.format(data1)
             with open(data_path, 'r') as f:
                 count_data = f.read()
                 f.close()

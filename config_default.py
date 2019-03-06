@@ -26,18 +26,9 @@ configs = {
 
 
 # 数据库配置
-# MONGODB_SERVER = 'localhost'
-# MONGODB_PORT = 27017
-# USER = 'maxiaoteng'
-# PASSWORD = 'yunfutech'
-# MONGODB_DATABASE = 'dianping'
-# MONGODB_COLLECTION = ''
-
-
-# 数据库配置
-MONGODB_SERVER = '13.57.255.239'
+MONGODB_SERVER = 'localhost'
 MONGODB_PORT = 27017
 USER = 'maxiaoteng'
 PASSWORD = 'maxiaoteng'
-MONGODB_DATABASE = 'first'
-MONGODB_COLLECTION = ''
+MONGODB_DATABASE = 'wechat'
+MONGODB_COLLECTION = 'wechat'

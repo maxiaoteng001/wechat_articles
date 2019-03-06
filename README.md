@@ -2,21 +2,15 @@
 
 ### 服务器
 - 服务器：A03
-- 位置：/data/www/yunfu/sddl/crawler
-- 爬取的图片放到a03 /data/www/yunfu/sddl/tech/storage/news
+- 位置：aws
+- 爬取的图片放到aws /home/ec2-user/wechat_articles/storage
 - tmux：sddl_crawler_wechat
 - 运行命令：python36 main.py
-#### tmux(sddl_crawler_wechat)
-- tmux new -s sddl_crawler_wechat
-- tmux a -t sddl_crawler_wechat
-- tmux detach
-- tmux ls
-- tmux kill-session -t sddl_crawler_wechat
 
 ----------
 
 ### 数据库名称
-- wechat_article
+- wechat
 
 ----------
 

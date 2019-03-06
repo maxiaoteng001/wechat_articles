@@ -194,8 +194,8 @@ def get_js_article(html_str, content_time):
                     # ['data-src']
                     # img_url = img[0]['data-src']
                     # 12/21 修改, 图片添加loading_url
-                    loading_url = 'http://static.sddl.yunfutech.com/app/default/loading.gif'
-                    img_url = 'http://static.sddl.yunfutech.com/news/{}/{}.png'.format(content_time, number)
+                    loading_url = 'http://static.wechat.maxiaoteng.tk/app/default/loading.gif'
+                    img_url = 'http://static.wechat.maxiaoteng.tk/news/{}/{}.png'.format(content_time, number)
                     onerror_str = "javascript:this.style.display='none'"
                     mg1 = '<img style="max-width: 100% !important; height: auto !important; visibility: visible !important;" src="{}" data-src="{}" onerror="{}">'.format(img_url, img_url, onerror_str)
                     mg = '<p style="text-align: center">' + mg1 + '</p>' + '\n'
