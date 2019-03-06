@@ -39,7 +39,12 @@ class AbuyunProxy(object):
 def get_proxies():
     abuyun = AbuyunProxy()
     proxies = abuyun.get_proxy()
-    return None
+    proxies = {
+        "http": "http://39.107.95.132:27233",
+        "https": "https://39.107.95.132:27233",
+    }
+
+    return proxies
 
 
 if __name__ == "__main__":

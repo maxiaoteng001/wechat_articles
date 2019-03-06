@@ -136,7 +136,7 @@ def __get_msg_list(url):
 
 def save_image(data, cover_url):
     try:
-        path = '/root/www/sddl/tech/storage/news/{}'.format(data)
+        path = '/home/ec2-user/wechat_articles/storage/news/{}'.format(data)
         #print(path)
         if not os.path.exists(path):
             os.makedirs(path)

@@ -252,7 +252,7 @@ def save_images(html, content_time):
         except:
             two_image = None
         image_lists = html_soup.select('img')
-        path = '/root/www/sddl/tech/storage/news/{}'.format(content_time)
+        path = '/home/ec2-user/wechat_articles/storage/news/{}'.format(content_time)
         #print(path)
         if not os.path.exists(path):
             os.makedirs(path)
