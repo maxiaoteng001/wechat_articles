@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+
+
+        <script nonce="" type="text/javascript">
+            window.logs = {
+                pagetime: {}
+            };
+            window.logs.pagetime['html_begin'] = (+new Date());
+        </script>
+        <title>鱼眼看电改 </title>
+        
+<link rel="stylesheet" href="https://res.wx.qq.com/open/libs/weui/0.2.0/weui.css">  
+<link rel="stylesheet" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile4096c8.css">
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/profile/sougou_profile_pc3de35e.css"> 
+<![endif]-->
+
+    </head>
+    <body id="" class="zh_CN    ">
+        
+        <link rel="dns-prefetch" href="//res.wx.qq.com">
+<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+<link rel="shortcut icon" type="image/x-icon" href="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+<script nonce="" type="text/javascript">
+    String.prototype.html = function(encode) {
+        var replace =["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&yen;", "¥", "&amp;", "&"];
+        
+		
+		
+		
+		
+        
+        var replaceReverse = ["&", "&amp;", "¥", "&yen;", "<", "&lt;", ">", "&gt;", " ", "&nbsp;", '"', "&quot;", "'", "&#39;"];
+	    var target;
+	    if (encode) {
+	    	target = replaceReverse;
+	    } else {
+	    	target = replace;
+	    }
+        for (var i=0,str=this;i< target.length;i+= 2) {
+             str=str.replace(new RegExp(target[i],'g'),target[i+1]);
+        }
+        return str;
+    };
+
+    window.isInWeixinApp = function() {
+        return /MicroMessenger/.test(navigator.userAgent);
+    };
+
+    window.getQueryFromURL = function(url) {
+        url = url || 'http://qq.com/s?a=b#rd'; 
+        var tmp = url.split('?'),
+            query = (tmp[1] || "").split('#')[0].split('&'),
+            params = {};
+        for (var i=0; i<query.length; i++) {
+            var arg = query[i].split('=');
+            params[arg[0]] = arg[1];
+        }
+        if (params['pass_ticket']) {
+        	params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g,"+"));
+        }
+        return params;
+    };
+
+    (function() {
+	    var params = getQueryFromURL(location.href);
+        window.uin = params['uin'] || "" || '';
+        window.key = params['key'] || "" || '';
+        window.wxtoken = params['wxtoken'] || '';
+        window.pass_ticket = params['pass_ticket'] || '';
+        window.appmsg_token = "";
+    })();
+
+    function wx_loaderror() {
+        if (location.pathname === '/bizmall/reward') {
+            new Image().src = '/mp/jsreport?key=96&content=reward_res_load_err&r=' + Math.random();
+        }
+    }
+
+</script>
+
+<script nonce="" type="text/javascript">
+            window.no_moon_ls = 0;
+    </script>
+        
+<div class="page_profile_info">
+    <div class="page_profile_info_inner">
+        <div class="profile_info_area">
+            <div class="profile_info_group">
+                <span class="radius_avatar profile_avatar">
+                                        <img src="http://wx.qlogo.cn/mmhead/Q3auHgzwzM7y3E4LtFc8EDeP5cXvmB4dxXjYmrVowETAciay9ujUuIg/0">
+                                    </span>
+                <div class="profile_info">
+                    <strong class="profile_nickname">
+                      鱼眼看电改
+                    </strong>
+                                    </div>
+            </div>
+            <ul class="profile_desc">
+                <li>
+                    <label class="profile_desc_label" for="">功能介绍</label>
+                    <div class="profile_desc_value" title="以不一样的视角和观点，观察能源与电力，跨界思考创新与变革">以不一样的视角和观点，观察能源与电力，跨界思考创新与变革</div>
+                </li>
+                <li>
+                    <label class="profile_desc_label" for="">帐号主体</label>
+                    <div class="profile_desc_value">以不一样的视角和观点，观察能源与电力，跨界思考创新与变革</div>
+                </li>
+            </ul>
+            
+            <div class="profile_opr"  style="display:none">
+                            <a href="javascript:void(0);" id="copyBt" class="weui_btn weui_btn_plain_primary">复制名称</a>
+                        </div>
+                
+        </div>
+        <div class="weui_category_title">最近10条群发</div>
+        <div class="weui_msg_card_list" id="history">  
+            
+        </div>
+        <div class="msg_card_tips">仅显示最近10条群发</div>
+
+        <div class="loadmore" style="display:none;" id="js_loading">
+            <div class="tips_wrp"><i class="icon_loading"></i><span class="tips">正在加载</span></div>
+        </div>
+        <div class="loadmore with_line" style="display:none;" id="js_nomore">
+            <div class="tips_wrp"><span class="tips">已无更多</span></div>
+        </div>
+    </div>
+    <div id="js_pc_qr_code" class="qr_code_pc_outer">
+        <div class="qr_code_pc_inner">
+            <div class="qr_code_pc">
+                <img id="js_pc_qr_code_img" class="qr_code_pc_img" src="/rr?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=m8Wa9uDcW*-JnGd93dW*KhucmZX*XvCGOzkAgNXLMIbVSLadAbXapWox8eqDVMAd*GpUIm2fH8yf*bGdwmyDFo**rU*ryuEMqmylbM*TsFk=">
+                <p>微信扫一扫<br>关注该公众号</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+        <script nonce="">
+    var __DEBUGINFO = {
+        debug_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console34c264.js",
+        safe_js : "//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe34c264.js",
+        res_list: []
+    };
+</script>
+
+<script nonce="" type="text/javascript">
+(function() {
+	var totalCount = 0,
+			finishCount = 0;
+
+	function _loadVConsolePlugin() {
+		window.vConsole = new window.VConsole();
+		while (window.vConsolePlugins.length > 0) {
+			var p = window.vConsolePlugins.shift();
+			window.vConsole.addPlugin(p);
+		}
+	}
+	
+	function _addVConsole(uri, cb) {
+		totalCount++;
+		var url = '//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/vconsole/' + uri;
+		var node = document.createElement('SCRIPT');
+		node.type = 'text/javascript';
+		node.src = url;
+		node.setAttribute('nonce', '');
+		if (cb) {
+			node.onload = cb;
+		}
+		document.getElementsByTagName('head')[0].appendChild(node);
+	}
+	if (
+		(document.cookie && document.cookie.indexOf('vconsole_open=1') > -1)
+		|| location.href.indexOf('vconsole=1') > -1
+	) {
+		window.vConsolePlugins = [];
+		_addVConsole('3.0.0/vconsole.min.js', function() {
+			
+			_addVConsole('plugin/vconsole-mpopt/1.0.1/vconsole-mpopt.js', _loadVConsolePlugin);
+		});
+	}
+})();
+</script>
+        
+        <script>window.__moon_host = 'res.wx.qq.com';window.moon_map = {"biz_common/utils/respTypes.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes3518c6.js","biz_common/utils/url/parse.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse36ebcf.js","biz_common/template-2.0.1-cmd.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/template-2.0.1-cmd3518c6.js","biz_wap/jsapi/core.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core3d3b85.js","biz_wap/utils/mmversion.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/mmversion3de208.js","biz_common/dom/class.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class3518c6.js","biz_common/utils/string/emoji.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/emoji3518c6.js","biz_wap/utils/ajax.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax405300.js","history/profile_history.html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history.html40e09f.js","biz_common/utils/string/html.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html410c03.js","history/template_helper.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/template_helper24f185.js","appmsg/cdn_img_lib.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib41931e.js","biz_common/dom/event.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event3a25e9.js","history/profile_history.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/history/profile_history3602f0.js","sougou/profile.js":"//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/profile31dd7f.js"};</script><script type="text/javascript">window.__wxgspeeds={}; window.__wxgspeeds.moonloadtime=+new Date()</script><script  type="text/javascript" src="//res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/moon415acd.js"></script>
+<script type="text/javascript">
+    
+    var biz = "MzIyNzg4ODU3NQ==" || "";
+    var src = "3" ; 
+    var ver = "1" ; 
+    var timestamp = "1543830857" ; 
+    var signature = "Hr7uxm3RhF6Hj5CyJ7h0prIaJRFXSfdhuLJe6SqntpThBhiLM2NrBPK5Y7CWKW-DzYETAUpx1X1utXnktKVAmA==" ; 
+    var name=""||"鱼眼看电改";
+        var msgList = {"list":[{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmopzmdAoXh4e5P4HbVyHPTvbgYsA0BnA1M1iSAVAvnLRvw4do-H-1ldjldBKPnmoEUwRreIL24ORMDsmBQGOD5Q=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62RhKBVbTgkjpCKFJjjvhwtOcUjAYmPFgyPTBHWkYc4tXbAZ0yMAYmxx7Y3icxOzb5h4fzz1VfwlfYA/0?wx_fmt=jpeg","del_flag":1,"digest":"综合能源服务，绝非你想象的这么简单。","duration":0,"fileid":100000281,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"简评：综合能源服务的本质是服务，不是项目"},"comm_msg_info":{"content":"","datetime":1543540641,"fakeid":"3227888575","id":1000000047,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmrMVH71*u2vViqSs5Y3z-3RnoSxdRob9Ts3qonMWOPZ5vmXcLoSwEYrKPtzkSmLTyu7kf6gTX9WY9ue2Zo7FlO4=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62TceGZLVskqMicf6sPax94nWoc6zmzxYOhBa00AicLIiaLcNg0iaVdVnc7U2GZqUJqy1oibcWBNkCmq6zg/0?wx_fmt=jpeg","del_flag":1,"digest":"在增量配网和用户负荷之间，存在一个模糊的地带，正在成为电改各方的关注点","duration":0,"fileid":100000276,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"增量配网的用户侧边界，模糊中的电改新热土"},"comm_msg_info":{"content":"","datetime":1543368619,"fakeid":"3227888575","id":1000000046,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmtwsfhB-CjXRK5I6VcAryEwGMiVadeCeBFT2RRaBT6MGVMWvJGRhYlavIfOazTY4QLijfugaHklMobHSzZ5dX1k=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62RTguAibLvG6ia5xTTfMVP5TsicOqA6Dib0Xn3vtOXpD5ia64JPETu0tY4W6PAVDmQx1pLStoJUSIztMJw/0?wx_fmt=jpeg","del_flag":1,"digest":"产业互联网是互联网的下半场？个人认为，就能源互联网而言，这个说法暂时是不成立的。","duration":0,"fileid":100000270,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"能源互联网不是互联网的下半场，至少现在还不是"},"comm_msg_info":{"content":"","datetime":1543195682,"fakeid":"3227888575","id":1000000045,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmiQXRVkbr8XojEHhqnoN7FkPxnB4VJFLrORPjPmlZdPFNEsKtNVXPIUoYptBkRIDVfH1c67nwn1sIZk*G26D-OM=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62RDqdQOqpJknoJRlibia6UXCsf6G50rm9p3AVCesdGMJMofwdW4Q73JrPspqLHWVuboeXovZbBh6x0A/0?wx_fmt=jpeg","del_flag":1,"digest":"对增量配网，既不能过度乐观，也不要盲目悲观。与其“等靠要”不如落地实践。","duration":0,"fileid":100000265,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"站在能源革命的高度，看待增量配网的理想与现实"},"comm_msg_info":{"content":"","datetime":1542330932,"fakeid":"3227888575","id":1000000044,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmmcTZeSqhs5-OtDNwe1LfRmFoCXLWht5atfN5P70S5HuLlqVgK0oPREPOv8Z27rk4gj2FS9-S3BL0qWptNgMFnc=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62S23UT9gWDsrIYhWjiaaDUag0wbW70BCO7WwXMeIkOsAiaeHtvOe8DOQdbWKqUx56ezucWYYqiamU2zw/0?wx_fmt=jpeg","del_flag":1,"digest":"当我们在讨论能源互联网的时候，我们在讨论什么","duration":0,"fileid":100000260,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"能源互联网，谈硬件不如谈服务"},"comm_msg_info":{"content":"","datetime":1541545445,"fakeid":"3227888575","id":1000000043,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmkkUK7xgkTwbeZ*xwI87R9U9OS*l0l6bbQV9xVnEWzm5dpJBTBryFCA*YzSEN8VbAini4Y2G3cQhcQ4TkiVbdEc=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62QFpXQ8YZnPkV9BeU3fGTfTOD0x6kwj7J0mldaVHeSbCQexL1RSsNqdz0q9ibqbcVpict0X7Ds8TUKg/0?wx_fmt=jpeg","del_flag":1,"digest":"能源行业，生产力决定生产关系也是必然的趋势。","duration":0,"fileid":100000253,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"能源革命，生产力决定生产关系的大趋势"},"comm_msg_info":{"content":"","datetime":1541121445,"fakeid":"3227888575","id":1000000042,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65Pms1sSKYo0mIXxn-PuDyWSo4gjrDiwFjju7ndvcQe1GdAagfOKGzru0dd6ROaOCp3NBvGl9ayTJA5Km86hSF6l4k=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62R9kqoACk8GMPGTBkTRmGLiaZDBtSvP1Pk02SM9gmVPQ0WchWRZW2QAh66JfKotK5Libs34vqkDjKKQ/0?wx_fmt=jpeg","del_flag":1,"digest":"综合能源服务战略设计，需要考虑可行的路径","duration":0,"fileid":100000249,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"寻找综合能源服务的可行商业模式（下）"},"comm_msg_info":{"content":"","datetime":1540006606,"fakeid":"3227888575","id":1000000041,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65Pmrv70gF1VQsuu4wSjJ1asAxLJSX0B0SMJ8spg8c9f7zqg1DuHGpRrT1E6NVR77R3xfTLShjQkSDXyUNWFcAVHKc=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62SRicgFXTlbIoINoC97NSQY5PgVqRicia2yK7e0SiaBqLUcciaJFFtTiaZPa5piaQG6jx7SkMIRcuIapoayQ/0?wx_fmt=jpeg","del_flag":1,"digest":"一、前言综合能源服务这个词已经被大家所熟知，但是在电力市场化环境下，基于能源技术创新的综合能源服务究竟能做成","duration":0,"fileid":100000237,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"寻找综合能源服务的可行商业模式（上）"},"comm_msg_info":{"content":"","datetime":1538032009,"fakeid":"3227888575","id":1000000040,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"IEEE PES","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmrHapkNMBc7xg3xzLIKlBoPluNVYig8v*HYhsu2v23Eo6NDUq5hSBcvcyGs6zWgakOWvW6A05fbbR423bDSA25w=","copyright_stat":100,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62T9rWxUwlicXCJ7U1n3hzny2frdamlE3fOOxn3PgqYbUp2hLMz0ZJL6FuOMQoRyRbmNx36p225bM8A/0?wx_fmt=jpeg","del_flag":1,"digest":"IEEE PES能源互联网技术委员会成立大会将于2018年10月20日在华北电力大学（北京校区）召开。","duration":0,"fileid":100000234,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"【学术会议】IEEE PES能源互联网专业委员会成立大会，诚邀您的出席"},"comm_msg_info":{"content":"","datetime":1537514204,"fakeid":"3227888575","id":1000000039,"status":2,"type":49}},{"app_msg_ext_info":{"audio_fileid":0,"author":"俞庆","content":"","content_url":"/s?timestamp=1543837795&amp;src=3&amp;ver=1&amp;signature=iaHEqUxr8HjPMyweH-35RZZ2PgMmcx0p-tv22B*c5h6QUuAqf5TYA245gcXk7*F4zhMXB3*CTJl0OgaHw65PmpcpboXNaYWFw1OZKHjBLwjB6GKQVGNQu3iH-2shSbI7P6OlPLxQO9LRfiaxiGPlSxJTEat3Q0N06J6vRyEVqfA=","copyright_stat":11,"cover":"http://mmbiz.qpic.cn/mmbiz_jpg/Ria683F4v62Sx9Fo6MS4F2Aib215bZ7iaE2XsOqb8VpOznjZmOreF5ybYHnNwlTtGuxNKeZG2kBKOnX5DYEpAObcA/0?wx_fmt=jpeg","del_flag":1,"digest":"综合能源服务，需要接地。","duration":0,"fileid":100000231,"is_multi":0,"item_show_type":0,"malicious_content_type":0,"malicious_title_reason_id":0,"multi_app_msg_item_list":[],"play_url":"","source_url":"","subtype":9,"title":"能评：综合能源服务，十只绵羊加起来不等于一只狮子"},"comm_msg_info":{"content":"","datetime":1536283252,"fakeid":"3227888575","id":1000000038,"status":2,"type":49}}]};
+        seajs.use("sougou/profile.js");
+</script>
+
+    </body>
+    <script nonce="" type="text/javascript">document.addEventListener("touchstart", function() {},false);</script>
+</html>
+
