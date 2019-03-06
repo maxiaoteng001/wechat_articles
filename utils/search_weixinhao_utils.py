@@ -91,9 +91,11 @@ def __execute_article_insert(insert_values):
     for value in insert_values:
         tmp_dict = {}
         fields = [
+            # 微信号acount
             "search_name",
             "title",
             "digest",
+            # 微信号名称pick_name
             "wechat_name",
             "url",
             "article_html",
