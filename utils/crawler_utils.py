@@ -11,6 +11,7 @@ import requests
 from bs4 import BeautifulSoup
 from .abuyun import get_proxies
 from utils import db_utils
+from .mongodb_utils import get_db
 
 cwdpath = sys.path[0]
 
@@ -278,26 +279,37 @@ def save_images(html, content_time):
 
     except Exception as e:
         print(e)
+
+
 def get_db_article_titles():
     """
     获取数据库中已有的文章标题列表
     :return:
     """
-    query_sql = 'SELECT title FROM wechat_article'
+    # query_sql = 'SELECT title FROM wechat_article'
+    # titles = []
+    # try:
+    #     db_connection = db_utils.get_connection()
+    #     with db_connection.cursor() as cursor:
+    #         cursor.execute(query_sql)
+    #         results = cursor.fetchall()
+    #         if results and len(results) > 0:
+    #             for row in results:
+    #                 titles.append(row['title'])
+    #     return titles
+    # except Exception as e:
+    #     logging.error("异常信息:", e)
+    # finally:
+    #     db_connection.close()
+
+    # 改用mongodb
     titles = []
-    try:
-        db_connection = db_utils.get_connection()
-        with db_connection.cursor() as cursor:
-            cursor.execute(query_sql)
-            results = cursor.fetchall()
-            if results and len(results) > 0:
-                for row in results:
-                    titles.append(row['title'])
-        return titles
-    except Exception as e:
-        logging.error("异常信息:", e)
-    finally:
-        db_connection.close()
+    db = get_db()
+    collection_name = 'wechat'
+    all_items = db.find(collection_name)
+    for item in all_items:
+        titles.append(item.get('title'))
+    return titles
 
 
 def get_today_date():

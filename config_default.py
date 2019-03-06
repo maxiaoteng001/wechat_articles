@@ -6,7 +6,7 @@ configs = {
         'host': 'localhost',
         'user': 'root',
         'password': 'j_81wLei4HFLY0VR',
-        'db_name': 'sddltech',
+        'db_name': 'wechat',
         'charset': 'utf8mb4'
     },
     'weixinhao': (  # 待爬取公众号类型列表
@@ -23,3 +23,21 @@ configs = {
         ('ai-front', 'AI前线'),
     )
 }
+
+
+# 数据库配置
+# MONGODB_SERVER = 'localhost'
+# MONGODB_PORT = 27017
+# USER = 'maxiaoteng'
+# PASSWORD = 'yunfutech'
+# MONGODB_DATABASE = 'dianping'
+# MONGODB_COLLECTION = ''
+
+
+# 数据库配置
+MONGODB_SERVER = '13.57.255.239'
+MONGODB_PORT = 27017
+USER = 'maxiaoteng'
+PASSWORD = 'maxiaoteng'
+MONGODB_DATABASE = 'first'
+MONGODB_COLLECTION = ''

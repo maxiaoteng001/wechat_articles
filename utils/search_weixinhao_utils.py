@@ -9,6 +9,7 @@ from utils import db_utils
 import requests
 cwdpath = sys.path[0]
 from .abuyun import get_proxies
+from utils.mongodb_utils import get_db
 
 
 def __get_search_url(weixinhao):
@@ -81,10 +82,35 @@ def __execute_article_insert(insert_values):
     """
     # search_name,title,digest,wechat_name,url,article_html,content,article_timestamp,
     # article_rich_media
-    insert_sql = 'insert into wechat_article (search_name,title,digest,wechat_name,' \
-                 'url,article_html,content,article_timestamp,article_rich_media, cover)' \
-                 ' values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
-    db_utils.insert_many(insert_sql, insert_values)
+    # insert_sql = 'insert into wechat_article (search_name,title,digest,wechat_name,' \
+    #              'url,article_html,content,article_timestamp,article_rich_media, cover)' \
+    #              ' values (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+    # db_utils.insert_many(insert_sql, insert_values)
+
+    # 改用mongodb
+    for value in insert_values:
+        tmp_dict = {}
+        fields = [
+            "search_name",
+            "title",
+            "digest",
+            "wechat_name",
+            "url",
+            "article_html",
+            "content",
+            "article_timestamp",
+            "article_rich_media",
+            "cover"
+        ]
+        for index, item in enumerate(value): 
+            tmp_dict[fields[index]] = item
+
+        db = get_db()
+        collection_name = 'wechat'
+        db.insert_one(collection_name, tmp_dict) 
+
+
+
 
 
 def __get_msg_list(url):
@@ -179,18 +205,19 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
                 article_text = crawler_utils.get_html_content(article_html)
                 if len(article_text) < 10:
                     continue
-
+                
                 insert_values.append((label, title, digest, wechat_name, content_url,
                                       article_html, article_text, article_timestamp,
                                       article_rich_media, cover_1))
+                print(insert_values)
                 data2 = int(count_data) + 1
                 with open(data_path, 'w') as f:
                     s = str(data2)
                     data = f.write(s)
                     f.close()
 
-
         else:
+            # 一次推送，一片文章
             cover = app_msg_ext_info['cover']
             with open(data_path, 'r') as f:
                 data1 = f.read()
@@ -200,7 +227,6 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
             with open(data_path, 'r') as f:
                 count_data = f.read()
                 f.close()
-            # 一次推送，一片文章
             title = app_msg_ext_info['title']  # 标题
             if title in origin_titles:  # 如果有该文章，则跳过
                 continue
@@ -230,4 +256,3 @@ def __get_article_insert_values(msg_list, wechat_name, label, origin_titles):
                 data = f.write(s)
                 f.close()
     return insert_values
-    #return None
